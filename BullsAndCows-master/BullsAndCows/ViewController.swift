@@ -31,85 +31,87 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
     
-    // TODO: 1. decide the data type you want to use to store the answear
     
-    var arrNumbs = [1,2,3,4,5,6,7]
     var putInArr = [Int]()
     var outStr = String()
-
-    var answear: UInt16!
+//    var answear: UInt16!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setGame()
         
     }
-
+    
     func setGame() {
         generateAnswear()
         remainingTime = 9
         hintArray.removeAll()
+        //        hintArray = []
         answearLabel.text = nil
         guessTextField.text = nil
         self.remainingTimeLabel.textColor = UIColor.blackColor()
-
+        
     }
     
     var arrInput = [Int]()
     
     
     func generateAnswear() -> [Int]{
+        outStr = ""
+        putInArr.removeAll()
+
+        print("61 : \(putInArr)")
+        var arrNumbs = [1,2,3,4,5,6,7,8,9,0]
+
         while putInArr.count < 4 {
-            let arc = arc4random_uniform(4) + 1
+            
+            let arc = arc4random_uniform(10) + 1
             if Int(arc) == arrNumbs[Int(arc) - 1] {
-                arrNumbs[Int(arc) - 1] = 0
+                arrNumbs[Int(arc) - 1] = -1
                 putInArr.append(Int(arc))
                 outStr += String(arc)
-
-            }else{
-                
             }
         }
-        
-        return putInArr
+        print("72 : \(putInArr)")
 
+        return putInArr
         // TODO: 2. generate your answear here
         // You need to generate 4 random and non-repeating digits.
         // Some hints: http://stackoverflow.com/q/24007129/938380
     }
     
     var keyInArr = [Int]()
-  
+    
     @IBAction func guess(sender: AnyObject) {
         let guessString = guessTextField.text
         
-
         
-
+        
         guard guessString?.characters.count == 4 else {
             let alert = UIAlertController(title: "you should input 4 digits to guess!", message: nil, preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             return
         }
-  //need help
-  
+        //need help
+        
         if Set(guessString!.characters).count < 4 {
-            let alert = UIAlertController(title: "you should not put the same digits to guess!", message: nil, preferredStyle: .Alert)
+            let alert = UIAlertController(title: "you should put different digits to guess!", message: nil, preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             return
         }
         
-
         
-
+        
+        
         let thousand = Int(guessString!)! / 1000
         let houndred = Int(guessString!)! / 100 - thousand * 10
         let ten = Int(guessString!)! / 10 - thousand * 100 - houndred * 10
         let one = Int(guessString!)! - thousand * 1000 - houndred * 100 - ten * 10
         keyInArr = [thousand, houndred, ten, one]
-//         TODO: 3. convert guessString to the data type you want to use and judge the guess
+        
+        //         TODO: 3. convert guessString to the data type you want to use and judge the guess
         
         
         
@@ -147,14 +149,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         }else if a == 4 {
             b = 0
         }
-
+        
         // TODO: 4. update the hint
-//        let hint = "1A2B"
+        //        let hint = "1A2B"
         let hint = "\(a)A  \(b)B"
         hintArray.append((guessString!, hint))
         
         // TODO: 5. update the constant "correct" if the guess is correct
-
+        
         var correct = false
         if outStr == guessString {
             correct = true
@@ -173,13 +175,14 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
         }
     }
+    
+    
+    
     @IBAction func showAnswear(sender: AnyObject) {
-        
         // TODO: 6. convert your answear to string(if it's necessary) and display it
         answearLabel.text = "\(outStr)"
         
     }
-    
     
     @IBAction func playAgain(sender: AnyObject) {
         setGame()
@@ -201,4 +204,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 }
+
+
 
