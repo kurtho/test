@@ -205,7 +205,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("Hint Cell", forIndexPath: indexPath)
         
 //        let (guess, hint) = hintArray[]
-        let (guess, hint) = hintArray.reverse()[indexPath.row]
+        let (guess, hint) = hintArray.reverse()[indexPath.row]  //[hintArray.count-indexPath.row-1]
         cell.textLabel?.text = "\(guess) => \(hint)"
         
         print("\(hintArray[indexPath.row])")
