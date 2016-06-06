@@ -26,7 +26,7 @@ class MyTableViewController: UITableViewController {
     let timeFour = "6月4日上午12:00"
     let contentFour = "日日思君不見君，共飲長江水。 此水幾時休，此恨何時已。只願君心似我心，定不負相思意。"
     
-    var images: [AnyObject] {return [imageOne, imageTwo, imageThree, imageFour]}
+    var images: [String] {return [imageOne, imageTwo, imageThree, imageFour]}
     var names: [String] {return [nameOne, nameTwo, nameThree, nameFour]}
     var times: [String] {return [timeOne, timeTwo, timeThree, timeFour]}
     var poem: [String] { return [contentOne, contentTwo, contentThree, contentFour] }
@@ -67,7 +67,8 @@ class MyTableViewController: UITableViewController {
         cell.myCellLabel.text = poem[indexPath.section]
         cell.myNameLabel.text = names[indexPath.section]
         cell.myTimeLabel.text = times[indexPath.section]
-//        cell.myImage.image = images[indexPath.row] as! UIImage
+//        cell.myImage.image = images[indexPath.section]
+        cell.myImage.image = UIImage(named: images[indexPath.row])
         // Configure the cell...
 //        cell.imageTitle.image = Image
         return cell

@@ -14,7 +14,7 @@
 		291DD5A51D02938E00E05D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291DD5A31D02938E00E05D03 /* LaunchScreen.storyboard */; };
 		291DD5AD1D02941B00E05D03 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291DD5AC1D02941B00E05D03 /* MyTableViewController.swift */; };
 		291DD5AF1D02946000E05D03 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291DD5AE1D02946000E05D03 /* MyTableViewCell.swift */; };
-		291DD5B51D03005900E05D03 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291DD5B41D03005900E05D03 /* File.swift */; };
+		29BE84FA1D05101F0055243C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BE84F91D05101F0055243C /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		291DD5A61D02938E00E05D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		291DD5AC1D02941B00E05D03 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		291DD5AE1D02946000E05D03 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
-		291DD5B41D03005900E05D03 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		29BE84F91D05101F0055243C /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				291DD59E1D02938E00E05D03 /* Main.storyboard */,
 				291DD5A11D02938E00E05D03 /* Assets.xcassets */,
 				291DD5A31D02938E00E05D03 /* LaunchScreen.storyboard */,
-				291DD5B41D03005900E05D03 /* File.swift */,
+				29BE84F91D05101F0055243C /* File.swift */,
 				291DD5A61D02938E00E05D03 /* Info.plist */,
 				291DD5AE1D02946000E05D03 /* MyTableViewCell.swift */,
 			);
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291DD5B51D03005900E05D03 /* File.swift in Sources */,
+				29BE84FA1D05101F0055243C /* File.swift in Sources */,
 				291DD59D1D02938E00E05D03 /* ViewController.swift in Sources */,
 				291DD5AF1D02946000E05D03 /* MyTableViewCell.swift in Sources */,
 				291DD5AD1D02941B00E05D03 /* MyTableViewController.swift in Sources */,
