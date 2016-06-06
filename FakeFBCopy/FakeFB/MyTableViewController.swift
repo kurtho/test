@@ -63,12 +63,19 @@ class MyTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as! MyTableViewCell
-        
+        let imageNames = Image.images[indexPath.row]
+
         cell.myCellLabel.text = poem[indexPath.section]
         cell.myNameLabel.text = names[indexPath.section]
         cell.myTimeLabel.text = times[indexPath.section]
 //        cell.myImage.image = images[indexPath.section]
-        cell.myImage.image = UIImage(named: images[indexPath.row])
+//        cell.myImage.image = UIImage(named: images[indexPath.row])
+//        cell.myImage.image = UIImage(named: imageNames.name)
+//        cell.textLabel?.text = imageNames.name
+//        cell.imageView?.image = UIImage(named: imageNames.name)
+        cell.myImage?.image = UIImage(named: imageNames.name)
+
+        
         // Configure the cell...
 //        cell.imageTitle.image = Image
         return cell
