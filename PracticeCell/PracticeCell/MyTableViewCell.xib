@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" rowHeight="467" id="KGk-i7-Jjw" customClass="MyTableViewCell" customModule="PracticeCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="467"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="466.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-Mo-WjJ">
+                        <rect key="frame" x="116" y="15" width="361" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eao-ck-HpY">
+                        <rect key="frame" x="116" y="65" width="361" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-LP-D8w">
+                        <rect key="frame" x="8" y="106" width="469" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z07-qb-kJJ">
+                        <rect key="frame" x="8" y="135" width="469" height="324"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="climb" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-rL-dov">
+                        <rect key="frame" x="8" y="8" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="Bcw-Nl-Pf7"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eao-ck-HpY" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="361:466" id="5vl-Yu-NKW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="h2z-LP-D8w" secondAttribute="trailing" id="6Pz-pG-k7H"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="z07-qb-kJJ" secondAttribute="leading" id="7qn-vx-0bt"/>
+                    <constraint firstAttribute="topMargin" secondItem="hS7-Mo-WjJ" secondAttribute="top" constant="-7" id="Arm-hu-kvg"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="1ny-rL-dov" secondAttribute="leading" id="DaI-Af-Qup"/>
+                    <constraint firstItem="hS7-Mo-WjJ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="361:466" id="EtG-rG-rdS"/>
+                    <constraint firstAttribute="topMargin" secondItem="1ny-rL-dov" secondAttribute="top" id="PAB-ar-9ed"/>
+                    <constraint firstItem="z07-qb-kJJ" firstAttribute="top" secondItem="h2z-LP-D8w" secondAttribute="bottom" constant="8" id="PGV-Hs-5Y5"/>
+                    <constraint firstItem="1ny-rL-dov" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="45:233" id="To5-5Z-JkW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="eao-ck-HpY" secondAttribute="trailing" id="UPD-FO-ohP"/>
+                    <constraint firstItem="eao-ck-HpY" firstAttribute="top" secondItem="hS7-Mo-WjJ" secondAttribute="bottom" constant="26" id="VGO-gM-6jP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hS7-Mo-WjJ" secondAttribute="trailing" id="WNP-J2-Cdo"/>
+                    <constraint firstItem="hS7-Mo-WjJ" firstAttribute="leading" secondItem="1ny-rL-dov" secondAttribute="trailing" constant="18" id="YWg-f7-psY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="z07-qb-kJJ" secondAttribute="trailing" id="bzU-l3-LxH"/>
+                    <constraint firstItem="h2z-LP-D8w" firstAttribute="top" secondItem="1ny-rL-dov" secondAttribute="bottom" constant="8" id="iy9-Td-Vgu"/>
+                    <constraint firstItem="z07-qb-kJJ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="469:466" id="px5-12-gGA"/>
+                    <constraint firstItem="1ny-rL-dov" firstAttribute="leading" secondItem="h2z-LP-D8w" secondAttribute="leading" id="rdd-Ea-yHu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="z07-qb-kJJ" secondAttribute="bottom" constant="-0.5" id="uLc-SB-EjL"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="YWg-f7-psY"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentImage" destination="z07-qb-kJJ" id="S5K-Nj-Xdq"/>
+                <outlet property="contentText" destination="h2z-LP-D8w" id="sw1-QH-CCp"/>
+                <outlet property="nameLabel" destination="hS7-Mo-WjJ" id="oYJ-HT-q1y"/>
+                <outlet property="timeLabel" destination="eao-ck-HpY" id="Q4m-iG-dbL"/>
+                <outlet property="titleView" destination="1ny-rL-dov" id="1Ro-6q-6Y9"/>
+            </connections>
+            <point key="canvasLocation" x="322.5" y="316.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="climb" width="1880" height="1410"/>
+    </resources>
+</document>
