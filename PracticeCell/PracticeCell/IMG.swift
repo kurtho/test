@@ -9,7 +9,7 @@
 import UIKit
 
 class Image {
-    static var images = [Image(name: "moon", description: "Moonnnnn"), Image(name: "rock", description: "Rockkkkkkkk"), Image(name: "sky", description: "Waterrrrrrr"), Image(name: "climb", description: "Waterrrrrrr")]
+    static var images = [Image(name: "moon", description: "Yesterday"), Image(name: "rock", description: "6月7日下午7:00"), Image(name: "sky", description: "6月6日下午6:20"), Image(name: "climb", description: "6月5日上午10:10")]
     var name: String
     var description: String?
 
