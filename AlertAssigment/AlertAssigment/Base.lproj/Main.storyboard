@@ -24,13 +24,27 @@
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5uB-60-nIw"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVk-Ws-qOk">
+                                <rect key="frame" x="252" y="339" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DSa-Au-Hio"/>
+                                    <constraint firstAttribute="width" constant="97" id="eTP-xo-Qg7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fVk-Ws-qOk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ZF-ka-OGd"/>
                             <constraint firstItem="1hM-LR-Sic" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OK9-eQ-enf"/>
+                            <constraint firstItem="fVk-Ws-qOk" firstAttribute="top" secondItem="1hM-LR-Sic" secondAttribute="bottom" constant="24" id="rFf-px-1jN"/>
                             <constraint firstItem="1hM-LR-Sic" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="shc-t8-IL0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textArea" destination="fVk-Ws-qOk" id="Qhd-MX-wgP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
