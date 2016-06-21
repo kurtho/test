@@ -77,20 +77,21 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return PicsList.Pic.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "1234"
+        cell.textLabel?.text = PicsList.Pic[indexPath.row].name
         //   ↑內建的非客製
-//        cell.detailTextLabel?.text = bookList[indexPath.row].author
+        cell.detailTextLabel?.text = PicsList.Pic[indexPath.row].description
         //   ↑內建的非客製
         
         
         
         return cell
     }
+
 }
 
 class House {
