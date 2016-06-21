@@ -11,6 +11,7 @@ import UIKit
 class MemberViewController: UIViewController {
     var pics: MemberList!
     var segmentNumb = 0
+    var classArray = []
     
     @IBOutlet weak var titleContent: UILabel!
     
@@ -38,9 +39,10 @@ class MemberViewController: UIViewController {
             segmentNumb = MemberList.member.count - 1
             
         }
+//         if sender.selectedSegmentIndex == 0 {
         imageView.image = UIImage(named: "\(MemberList.member[segmentNumb].name)")
         print("segmentNumb = \(segmentNumb), memberlist = \(MemberList.member.count)" )
-        
+//        }
     }
     
     
@@ -50,10 +52,14 @@ class MemberViewController: UIViewController {
             textContent.text = MemberList.member[0].content
             titleContent.text = MemberList.member[0].description
             
+            
         } else if sender.selectedSegmentIndex == 1 {
             imageView.image = UIImage(named: "\(ConsaultList.consault[0].name)")
             textContent.text = ConsaultList.consault[0].content
             titleContent.text = ConsaultList.consault[0].description
+            
+            classArray = ConsaultList.consault
+            
         } else {
             imageView.image = UIImage(named: "\(StudentList.student[0].name)")
             textContent.text = StudentList.student[0].content

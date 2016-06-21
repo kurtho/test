@@ -68,9 +68,9 @@
 			children = (
 				295423F61D13CB86006E990C /* AppDelegate.swift */,
 				2954240F1D13D427006E990C /* MovieTableViewController.swift */,
+				2954240D1D13D2EF006E990C /* MovieTableViewCell.swift */,
 				295423F81D13CB86006E990C /* ViewController.swift */,
 				295423FA1D13CB86006E990C /* Main.storyboard */,
-				2954240D1D13D2EF006E990C /* MovieTableViewCell.swift */,
 				295424001D13CB86006E990C /* Assets.xcassets */,
 				2954240B1D13D198006E990C /* MyMovies.swift */,
 				295424111D13E70B006E990C /* AddViewController.swift */,
@@ -310,6 +310,7 @@
 				2954240A1D13CB86006E990C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

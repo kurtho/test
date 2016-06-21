@@ -18,11 +18,7 @@ class MovieTableViewController: UITableViewController {
 
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,16 +64,7 @@ class MovieTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("show detail", sender:MoviesList.movies[indexPath.row])
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "show detail" {
-//            let destinationViewController = segue.destinationViewController as!  AddViewController
-//            let imageObject = sender as? MoviesList
-//            destinationViewController.imageView = imageObject?.name
-////            destinationViewController.imageName = imageObject?.name
-//        }
-//    }         delegate
-    
-//Image.images[indexPath.row
+
 
     
     // Override to support conditional editing of the table view.
