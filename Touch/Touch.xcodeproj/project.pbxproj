@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0527CD98C715CC9366E3F943 /* Pods_Touch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B851D7B9751D70984774C7E /* Pods_Touch.framework */; };
+		293975491D198EE000BF2A26 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293975481D198EE000BF2A26 /* FileViewController.swift */; };
+		2939758B1D1A4B5C00BF2A26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2939758A1D1A4B5C00BF2A26 /* GoogleService-Info.plist */; };
 		29448AB81D07BEA60092D51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29448AB71D07BEA60092D51C /* AppDelegate.swift */; };
 		29448ABA1D07BEA60092D51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29448AB91D07BEA60092D51C /* ViewController.swift */; };
 		29448ABD1D07BEA60092D51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29448ABB1D07BEA60092D51C /* Main.storyboard */; };
@@ -19,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293975481D198EE000BF2A26 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		2939758A1D1A4B5C00BF2A26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		29448AB41D07BEA60092D51C /* Touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29448AB71D07BEA60092D51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29448AB91D07BEA60092D51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,9 @@
 		29448ACD1D07E89E0092D51C /* DiariesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiariesTableViewController.swift; sourceTree = "<group>"; };
 		29448ACF1D07E9B40092D51C /* DiariesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiariesTableViewCell.swift; sourceTree = "<group>"; };
 		29448AD71D0BF7090092D51C /* BlurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
+		2BA9454EF5ED963B79F5768A /* Pods-Touch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Touch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Touch/Pods-Touch.release.xcconfig"; sourceTree = "<group>"; };
+		49A712F56AC7BE8F7E739FAF /* Pods-Touch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Touch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Touch/Pods-Touch.debug.xcconfig"; sourceTree = "<group>"; };
+		4B851D7B9751D70984774C7E /* Pods_Touch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Touch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0527CD98C715CC9366E3F943 /* Pods_Touch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +57,8 @@
 			children = (
 				29448AB61D07BEA60092D51C /* Touch */,
 				29448AB51D07BEA60092D51C /* Products */,
+				A7ABF238D9FD50FBE70F4B2E /* Pods */,
+				7963A4411D9118637DD23317 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,15 +76,34 @@
 				29448AB71D07BEA60092D51C /* AppDelegate.swift */,
 				29448AB91D07BEA60092D51C /* ViewController.swift */,
 				29448ACD1D07E89E0092D51C /* DiariesTableViewController.swift */,
+				2939758A1D1A4B5C00BF2A26 /* GoogleService-Info.plist */,
 				29448ACF1D07E9B40092D51C /* DiariesTableViewCell.swift */,
 				29448ABB1D07BEA60092D51C /* Main.storyboard */,
 				29448ABE1D07BEA60092D51C /* Assets.xcassets */,
 				29448AC91D07E5E10092D51C /* DiaryCata.swift */,
+				293975481D198EE000BF2A26 /* FileViewController.swift */,
 				29448AC01D07BEA60092D51C /* LaunchScreen.storyboard */,
 				29448AC31D07BEA60092D51C /* Info.plist */,
 				29448AD71D0BF7090092D51C /* BlurViewController.swift */,
 			);
 			path = Touch;
+			sourceTree = "<group>";
+		};
+		7963A4411D9118637DD23317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B851D7B9751D70984774C7E /* Pods_Touch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7ABF238D9FD50FBE70F4B2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49A712F56AC7BE8F7E739FAF /* Pods-Touch.debug.xcconfig */,
+				2BA9454EF5ED963B79F5768A /* Pods-Touch.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29448AC61D07BEA60092D51C /* Build configuration list for PBXNativeTarget "Touch" */;
 			buildPhases = (
+				183F76DC553767BB467283F5 /* [CP] Check Pods Manifest.lock */,
 				29448AB01D07BEA60092D51C /* Sources */,
 				29448AB11D07BEA60092D51C /* Frameworks */,
 				29448AB21D07BEA60092D51C /* Resources */,
+				3510A4C6D4661814B64E6ECB /* [CP] Embed Pods Frameworks */,
+				E3423D213C93ABAB88CB5D82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,12 +168,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				29448AC21D07BEA60092D51C /* LaunchScreen.storyboard in Resources */,
+				2939758B1D1A4B5C00BF2A26 /* GoogleService-Info.plist in Resources */,
 				29448ABF1D07BEA60092D51C /* Assets.xcassets in Resources */,
 				29448ABD1D07BEA60092D51C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		183F76DC553767BB467283F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3510A4C6D4661814B64E6ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Touch/Pods-Touch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3423D213C93ABAB88CB5D82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Touch/Pods-Touch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29448AB01D07BEA60092D51C /* Sources */ = {
@@ -153,6 +235,7 @@
 				29448ABA1D07BEA60092D51C /* ViewController.swift in Sources */,
 				29448ACE1D07E89E0092D51C /* DiariesTableViewController.swift in Sources */,
 				29448AB81D07BEA60092D51C /* AppDelegate.swift in Sources */,
+				293975491D198EE000BF2A26 /* FileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +346,7 @@
 		};
 		29448AC71D07BEA60092D51C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49A712F56AC7BE8F7E739FAF /* Pods-Touch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Touch/Info.plist;
@@ -274,6 +358,7 @@
 		};
 		29448AC81D07BEA60092D51C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA9454EF5ED963B79F5768A /* Pods-Touch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Touch/Info.plist;

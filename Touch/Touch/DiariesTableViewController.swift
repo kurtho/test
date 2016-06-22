@@ -7,16 +7,52 @@
 //
 
 import UIKit
+import SDWebImage
+import SwiftyJSON
+import Alamofire
+import Firebase
+
 
 class DiariesTableViewController: UITableViewController {
+    var houseArray = [House]()
 
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
-//        tableView.estimatedRowHeight = 50
-//        tableView.rowHeight = UITableViewAutomaticDimension
-        
+        let urlString: String = "http://data.taipei/opendata/datalist/apiAccess"
+        Alamofire.request(.GET, urlString, parameters: ["scope" : "resourceAquire", "rid": "11f11d42-bdd8-45d0-9493-8134b2e494e9", "offset": "45", "limit": "30"])
+            .responseJSON {
+                response in
+                //                print("Response data: \(response.result.value)")
+                
+                if let data = response.result.value {
+                    let json = JSON(data)
+                    let houseList = json["result"]["results"].arrayValue
+                    
+                    for house in houseList {
+                        print("house name \(house["o_tlc_agency_img_front"].stringValue)")
+                        let houses = House()
+                        houses.name = house["o_tlc_agency_name"].stringValue
+                        houses.adress = house["o_tlc_agency_address"].stringValue
+                        houses.photoLink = house["o_tlc_agency_img_front"].stringValue
+                        self.houseArray.append(houses)
+                        
+                        
+                        let ref = FIRDatabase.database().reference()
+                        //reference指向firebase網站
+                        //        ref.child("cust").child("cust1").setValue(["name": "Taipei 101"])
+                        //let childRef = ref.child(houses.name).childByAutoId()
+                        ref.child(houses.name).setValue(["adress": houses.adress])
+                        
+                        
+                        
+                    }
+                }
+                self.tableView.reloadData()
+                print("Response data: \(response.result.value)")
+                
+                
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +69,15 @@ class DiariesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return DiariesLists.diaries.count
+        return houseArray.count
     }
 
-        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as! DiariesTableViewCell
-        let picName = DiariesLists.diaries[indexPath.row]
-        cell.diariesPic?.image = UIImage(named: picName.name)
-        cell.timeLabel.text = picName.name
-            cell.titleLabel.text = picName.description
-        // Configure the cell...
-        
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+            cell.textLabel?.text = houseArray[indexPath.row].name
+        let url = NSURL(string: houseArray[indexPath.row].photoLink)
+        cell.imageView?.sd_setImageWithURL(url, placeholderImage: nil)
+//        // Configure the cell...
         return cell
     }
  
@@ -54,6 +88,11 @@ class DiariesTableViewController: UITableViewController {
         }
     }
 
+    
+    
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -99,4 +138,10 @@ class DiariesTableViewController: UITableViewController {
     }
     */
 
+}
+
+class House {
+    var name: String = ""
+    var adress: String = ""
+    var photoLink: String  = ""
 }
