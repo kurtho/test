@@ -1,0 +1,13 @@
+//
+//  CollectionCell.swift
+//  CollectViewCustom
+//
+//  Created by KurtHo on 2016/6/27.
+//  Copyright © 2016年 Kurt. All rights reserved.
+//
+
+import UIKit
+
+class CollectionCell: UICollectionViewCell {
+    
+}
